@@ -29,7 +29,7 @@ export default function About() {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">About MMTC Theatre Group</h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Founded in 2015, MMTC Theatre Group has been a cornerstone of our community's cultural life, 
+            Founded in 2015, MMTC Theatre Group has been a cornerstone of our community&apos;s cultural life, 
             bringing exceptional live theatre to audiences while fostering artistic growth and creative expression.
           </p>
         </div>
@@ -116,8 +116,8 @@ export default function About() {
         <div className="bg-purple-700 text-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our Theatre Family</h2>
           <p className="text-lg mb-6">
-            Whether you're interested in acting, directing, technical work, or volunteering, 
-            there's a place for you at MMTC Theatre Group.
+            Whether you&apos;re interested in acting, directing, technical work, or volunteering, 
+            there&apos;s a place for you at MMTC Theatre Group.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-yellow-400 text-gray-900 px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors font-medium">

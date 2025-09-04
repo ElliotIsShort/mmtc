@@ -4,7 +4,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">Contact Us</h1>
         <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-          Get in touch with MMTC Theatre Group. We'd love to hear from you whether you're interested in 
+          Get in touch with MMTC Theatre Group. We&apos;d love to hear from you whether you&apos;re interested in 
           joining our productions, attending our shows, or partnering with us.
         </p>
 
