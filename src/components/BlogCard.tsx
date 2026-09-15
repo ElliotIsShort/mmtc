@@ -24,7 +24,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   };
 
   return (
-    <Link href={`/blog/${post.slug}`} className="block group">
+    <Link href={`/blog/post?slug=${post.slug}`} className="block group">
       <article className="card h-full flex flex-col">
         {/* Cover Image */}
         <div className="relative aspect-video overflow-hidden">

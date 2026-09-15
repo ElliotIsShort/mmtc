@@ -42,7 +42,47 @@
   }
 
   .prose-content {
-    @apply prose prose-lg max-w-none prose-headings:font-display prose-a:text-primary-700 prose-a:no-underline hover:prose-a:underline;
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .prose-content p {
+    @apply mb-4;
+  }
+
+  .prose-content h1, .prose-content h2, .prose-content h3, .prose-content h4 {
+    @apply font-display font-bold text-gray-900 mt-8 mb-4;
+  }
+
+  .prose-content h2 {
+    @apply text-2xl;
+  }
+
+  .prose-content h3 {
+    @apply text-xl;
+  }
+
+  .prose-content a {
+    @apply text-primary-700 hover:underline;
+  }
+
+  .prose-content ul, .prose-content ol {
+    @apply mb-4 pl-6;
+  }
+
+  .prose-content ul {
+    @apply list-disc;
+  }
+
+  .prose-content ol {
+    @apply list-decimal;
+  }
+
+  .prose-content li {
+    @apply mb-2;
+  }
+
+  .prose-content strong {
+    @apply font-semibold text-gray-900;
   }
 }
 

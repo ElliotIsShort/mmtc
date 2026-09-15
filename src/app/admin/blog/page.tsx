@@ -386,7 +386,7 @@ export default function AdminBlogPage() {
                         <div className="flex justify-end gap-2">
                           {post.isPublished && (
                             <a
-                              href={`/blog/${post.slug}`}
+                              href={`/blog/post?slug=${post.slug}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="p-2 text-gray-400 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
