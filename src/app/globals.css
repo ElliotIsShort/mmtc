@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-gray-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg;
+  }
+
+  .page-header {
+    @apply bg-gradient-to-r from-primary-700 to-primary-900 text-white py-16 md:py-20;
+  }
+
+  .page-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6;
+  }
+
+  .prose-content {
+    @apply prose prose-lg max-w-none prose-headings:font-display prose-a:text-primary-700 prose-a:no-underline hover:prose-a:underline;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
