@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
@@ -11,9 +11,9 @@ import Button from '@/components/ui/Button';
 import { BlogPost } from '@/types';
 import { getBlogPostBySlug } from '@/lib/firestore';
 
-function BlogPostContent() {
-  const searchParams = useSearchParams();
-  const slug = searchParams.get('slug');
+export default function BlogPostPage() {
+  const params = useParams();
+  const slug = params.slug as string;
   
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
@@ -21,11 +21,7 @@ function BlogPostContent() {
 
   useEffect(() => {
     async function fetchPost() {
-      if (!slug) {
-        setError(true);
-        setLoading(false);
-        return;
-      }
+      if (!slug) return;
       
       try {
         const blogPost = await getBlogPostBySlug(slug);
@@ -151,21 +147,5 @@ function BlogPostContent() {
         </div>
       </article>
     </Layout>
-  );
-}
-
-export default function BlogPostPage() {
-  return (
-    <Suspense fallback={
-      <Layout>
-        <div className="section-padding">
-          <div className="container-page">
-            <LoadingSpinner size="lg" text="Loading..." className="py-12" />
-          </div>
-        </div>
-      </Layout>
-    }>
-      <BlogPostContent />
-    </Suspense>
   );
 }
