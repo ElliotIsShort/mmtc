@@ -14,11 +14,16 @@ export async function generateStaticParams() {
       .filter((slug): slug is string => Boolean(slug));
     
     // Return array of slug params for static generation
+    // If no posts exist, return a placeholder to satisfy static export requirement
+    if (slugs.length === 0) {
+      return [{ slug: 'placeholder' }];
+    }
+    
     return slugs.map((slug) => ({ slug }));
   } catch (error) {
     console.error('Error fetching blog slugs for static generation:', error);
-    // Return empty array - pages will be generated on-demand if possible
-    return [];
+    // Return placeholder slug for static export - the page will show "not found" state
+    return [{ slug: 'placeholder' }];
   }
 }
 
