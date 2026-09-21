@@ -85,7 +85,7 @@ export default function Footer() {
               © {currentYear} Melyncrythan Musical Theatre Company. All rights reserved.
             </p>
             <p className="text-xs text-gray-600">
-              Registered Charity No. 1234567
+              Registered Charity No. 1152914
             </p>
           </div>
         </div>

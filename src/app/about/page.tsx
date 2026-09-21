@@ -168,7 +168,7 @@ export default function AboutPage() {
                 Orchard Street, Neath, SA11 1DU
               </p>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.5!2d-3.8069!3d51.6595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM5JzM0LjIiTiAzwrA0OCcyNC44Ilc!5e0!3m2!1sen!2suk!4v1600000000000!5m2!1sen!2suk"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d619.6!2d-3.807449!3d51.6531206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486e5dc550ca2495%3A0x6114474ede2a1c40!2sMMTC%20HEADQUARTERS!5e0!3m2!1sen!2suk!4v1600000000000!5m2!1sen!2suk"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
