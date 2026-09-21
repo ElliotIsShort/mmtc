@@ -210,7 +210,7 @@ export default function ContactPage() {
                   </div>
                   <div className="pt-3 border-t border-gray-200">
                     <strong>Location:</strong>
-                    <p className="text-gray-600">Melyncrythan Community Hall, Neath</p>
+                    <p className="text-gray-600">MMTC Practice Hall, Neath</p>
                   </div>
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-xl"
-                  title="MMTC Headquarters Location"
+                  title="MMTC Location"
                 />
               </div>
             </div>

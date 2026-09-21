@@ -44,6 +44,26 @@ export interface Supporter {
   websiteUrl?: string;
 }
 
+export interface AboutPageContent {
+  id: string;
+  heroSubtitle: string;
+  historyContent: string;
+  foundedYear: string;
+  productionsCount: string;
+  membersCount: string;
+  awardsText: string;
+  seniorRehearsalTimes: string;
+  seniorLocation: string;
+  seniorDescription: string;
+  juniorRehearsalTimes: string;
+  juniorLocation: string;
+  juniorDescription: string;
+  venueDescription: string;
+  venueAddress: string;
+  ctaTitle: string;
+  ctaDescription: string;
+}
+
 export type InterestType = ContactSubmission['interest'];
 
 export const INTEREST_LABELS: Record<InterestType, string> = {

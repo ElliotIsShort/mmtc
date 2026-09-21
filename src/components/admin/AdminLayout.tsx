@@ -14,6 +14,7 @@ import {
   Menu,
   X,
   Home,
+  Info,
 } from 'lucide-react';
 import { useState } from 'react';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
@@ -27,6 +28,7 @@ const NAV_ITEMS = [
   { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
   { name: 'Shows', href: '/admin/shows', icon: Film },
   { name: 'Blog Posts', href: '/admin/blog', icon: FileText },
+  { name: 'About Page', href: '/admin/about', icon: Info },
   { name: 'Submissions', href: '/admin/submissions', icon: MessageSquare },
 ];
 

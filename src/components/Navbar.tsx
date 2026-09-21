@@ -7,9 +7,9 @@ import SocialLinks from './SocialLinks';
 
 const NAV_LINKS = [
   { name: 'Home', href: '/' },
+  { name: 'About & History', href: '/about' },
   { name: 'Upcoming Show', href: '/upcoming' },
   { name: 'Past Productions', href: '/past-productions' },
-  { name: 'About & History', href: '/about' },
   { name: 'Blog', href: '/blog' },
   { name: 'Join Us / Contact', href: '/contact' },
 ];

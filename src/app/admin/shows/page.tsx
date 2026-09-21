@@ -18,6 +18,7 @@ import Textarea from '@/components/ui/Textarea';
 import Select from '@/components/ui/Select';
 import Modal from '@/components/ui/Modal';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import DatePicker from '@/components/ui/DatePicker';
 import { Show } from '@/types';
 import {
   getShows,
@@ -445,13 +446,12 @@ export default function AdminShowsPage() {
           />
 
           <div className="grid sm:grid-cols-2 gap-4">
-            <Input
+            <DatePicker
               label="Performance Dates"
-              name="dates"
               value={formData.dates}
-              onChange={handleChange}
+              onChange={(dates) => setFormData((prev) => ({ ...prev, dates }))}
               required
-              placeholder="e.g., October 12–15, 2026"
+              helperText="Click to select date range"
             />
             <Input
               label="Venue"
@@ -482,14 +482,16 @@ export default function AdminShowsPage() {
               min={1923}
               max={2100}
             />
-            <Input
-              label="Ticket URL"
-              name="ticketUrl"
-              type="url"
-              value={formData.ticketUrl}
-              onChange={handleChange}
-              placeholder="https://..."
-            />
+            {formData.status === 'upcoming' && (
+              <Input
+                label="Ticket URL"
+                name="ticketUrl"
+                type="url"
+                value={formData.ticketUrl}
+                onChange={handleChange}
+                placeholder="https://..."
+              />
+            )}
           </div>
 
           <Input

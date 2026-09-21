@@ -19,8 +19,25 @@ export default function PastProductionsPage() {
     async function fetchShows() {
       try {
         const pastShows = await getPastShows();
-        setShows(pastShows);
-        setFilteredShows(pastShows);
+        // Sort by year (descending), then by dates string to get most recent first
+        const sortedShows = pastShows.sort((a, b) => {
+          // First sort by year descending
+          if (b.year !== a.year) {
+            return b.year - a.year;
+          }
+          // If same year, try to parse month from dates string for secondary sort
+          const getMonthIndex = (dates: string): number => {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                          'July', 'August', 'September', 'October', 'November', 'December'];
+            for (let i = 0; i < months.length; i++) {
+              if (dates.includes(months[i])) return i;
+            }
+            return 0;
+          };
+          return getMonthIndex(b.dates) - getMonthIndex(a.dates);
+        });
+        setShows(sortedShows);
+        setFilteredShows(sortedShows);
       } catch (error) {
         console.error('Error fetching past shows:', error);
       } finally {
@@ -35,15 +52,14 @@ export default function PastProductionsPage() {
     (a, b) => b - a
   );
 
-  // Filter shows by decade
+  // Filter shows by decade while maintaining sort order
   useEffect(() => {
     if (selectedDecade === 'all') {
       setFilteredShows(shows);
     } else {
       const decadeStart = parseInt(selectedDecade);
-      setFilteredShows(
-        shows.filter((show) => show.year >= decadeStart && show.year < decadeStart + 10)
-      );
+      const filtered = shows.filter((show) => show.year >= decadeStart && show.year < decadeStart + 10);
+      setFilteredShows(filtered);
     }
   }, [selectedDecade, shows]);
 
